@@ -40,11 +40,11 @@ onMounted(() => {
 main {
   width: 100%;
   height: 1000px;
-  background-color: var(--vt-c-black-mute);
+  background-color: var(--color-background-soft);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  mask-image: url(./assets/magicpattern-grid-pattern-1720454996065_4.svg);
+  mask-image: url(./assets/background_pattern.svg);
   mask-size: auto 100%;
   mask-repeat: no-repeat;
 }
