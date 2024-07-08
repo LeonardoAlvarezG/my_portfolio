@@ -47,6 +47,7 @@ main {
   mask-image: url(./assets/background_pattern.svg);
   mask-size: auto 100%;
   mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 @media (min-width: 1024px) {
