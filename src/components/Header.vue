@@ -63,7 +63,6 @@
         height: 100%;
         min-width: 128px;
         max-width: 250px;
-        /* width: 100%; */
     }
 
     header nav>ul {
