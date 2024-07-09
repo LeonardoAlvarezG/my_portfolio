@@ -1,5 +1,6 @@
 <script setup>
 import Header from "./components/Header.vue"
+import Presentation from "./components/Presentation.vue"
 import { onMounted, ref, computed } from "vue";
 
 const storageTheme = localStorage.getItem('theme');
@@ -33,21 +34,34 @@ onMounted(() => {
 <template>
   <Header />
 
-  <main></main>
+  <main>
+    <div class="background"></div>
+    <Presentation />
+  </main>
 </template>
 
 <style scoped>
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
   width: 100%;
-  height: 1000px;
+  height: fit-content; 
+}
+main > div.background {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 400px;
   background-color: var(--color-background-soft);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   mask-image: url(./assets/background_pattern.svg);
-  mask-size: auto 100%;
+  mask-size: cover;
   mask-repeat: no-repeat;
-  mask-position: center;
+  mask-position: top center;
 }
 
 @media (min-width: 1024px) {
