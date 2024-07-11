@@ -6,7 +6,8 @@
             </figure>
             <header>
                 <hgroup class="presentation">
-                    <h1>Hi, I'm Leonardo Alvarez</h1>
+                    <h2>Hi, I'm</h2>
+                    <h1>Leonardo Alvarez</h1>
                     <p>Front-End Web Developer</p>
                 </hgroup>
                 <section class="presentation information">
@@ -24,8 +25,8 @@
                     </article>
                 </section>
                 <section class="presentation contact">
-                    <button class="contact_me">Contact Me!</button>
-                    <button class="resume">Get Resume</button>
+                    <a href="#contact" class="contact_me">Contact Me!</a>
+                    <a href="" class="resume">Get Resume</a>
                 </section>
             </header>
         </article>
@@ -41,6 +42,7 @@ section {
     width: 100%;
     height: fit-content;
     justify-content: center;
+    margin-top: 40px;
 
     & > article {
         display: flex;
@@ -55,15 +57,23 @@ section {
         gap: 1rem;
         
         & > figure.profile {
+            display: flex;
             position: relative;
             width: 100%;
             min-width: 234px;
             max-width: 324px;
+            border-radius: 2rem;
+            overflow: hidden;
+
             
             & img {
-                object-position: contain;
+                object-fit: cover;
                 width: 100%;
-                border-radius: 2rem;
+                transition: all ease 0.2s;
+
+                &:hover {
+                    transform: scale(1.25);
+                }
             }
         }
 
@@ -79,15 +89,45 @@ section {
             & > hgroup.presentation {
                 width: 100%;
                 min-width: 234px;
-                max-width: 324px;
+                max-width: 600px;
                 text-align: end;
+                margin: 2rem 0 0 0;
+
+                & h2 {
+                    font-size: 1.5rem;
+                    transition: all ease 0.2s;
+
+                    &:hover {
+                        text-shadow: 0 0 5px var(--accent-color);
+                    }
+                }
+
+                & h1 {
+                    font-size: 4.5rem;
+                    color: var(--accent-color);
+                    line-height: 1;
+                    transition: all ease 0.2s;
+
+                    &:hover {
+                        text-shadow: 0 0 5px var(--accent-color);
+                    }
+                }
+
+                & p {
+                    font-size: 2rem;
+                    line-height: 2;
+
+                    &:hover {
+                        text-shadow: 0 0 5px var(--accent-color);
+                    }
+                }
             }
 
             & > section.presentation.information {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: center;
+                align-items: end;
                 height: fit-content;
 
                 & > article {
@@ -96,25 +136,44 @@ section {
                     justify-content: center;
                     text-align: center;
                     width: 100%;
-                    min-width: 150px;
-                    max-width: 200px;
+                    min-width: 228px;
+                    max-width: 228px;
                     height: 100%;
-                    min-height: 132px;
+                    min-height: 100px;
                     max-height: 182px;
                     gap: 0;
+                    border-radius: 2rem;
+                    border: 2px solid transparent;
+                    transition: all ease 0.2s;
+                    padding: 0.5rem;
+
+                    &:hover {
+                        border: 2px solid var(--accent-color);
+                        box-shadow: 0 0 10px 2px var(--accent-color);
+                        backdrop-filter: blur(3px);
+                    }
 
                     & h1 {
                         height: 100%;
                         align-content: end;
                         font-size: 4rem;
+                        color: var(--accent-color);
+                    }
+
+                    & p{
+                        font-size: 1.2rem;
                     }
                 }
 
                 & > article:last-child {
                     & h1 {
                         height: 100%;
-                        align-content: end;
+                        align-content: center;
                         font-size: 3rem;
+                    }
+
+                    & p {
+                        font-size: 1rem;
                     }
                 }
             }
@@ -129,22 +188,25 @@ section {
                 height: fit-content;
                 align-self: center;
 
-                & button {
+                & >a {
+                    display: flex;
                     position: relative;
                     height: 60px;
                     width: 150px;
                     border-radius: 50px;
-                    text-transform: uppercase;
-                    justify-content: center;
                     align-items: center;
                     cursor: pointer;
+                    text-transform: uppercase;
+                    justify-content: center;
+                    font-size: 1rem;
                     transition: all ease 0.2s;
 
                     &.contact_me {
                         background-color: var(--accent-color);
+                        color: var(--color-background);
 
                         &:hover {
-                            color: var(--color-heading);
+                            text-shadow: 0 0 20px var(--color-background);
                         }
                     }
 
@@ -154,7 +216,8 @@ section {
 
                         &:hover {
                             background-color: var(--accent-color);
-                            color: var(--color-heading);
+                            color: var(--color-background);
+                            text-shadow: 0 0 20px var(--color-background);
                         }
                     }
                 }

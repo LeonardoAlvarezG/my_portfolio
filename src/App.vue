@@ -11,30 +11,14 @@ const newTheme = storageTheme ?? systemColorScheme;
 document.documentElement.setAttribute('data-theme', newTheme);
 
 onMounted(() => {
-  // const switcherTheme = document.querySelector('.main__check');
-  // const root = document.documentElement;
-
-  // if(root.getAttribute('data-theme') === 'dark'){
-  //   switcherTheme.checked = true;      
-  // } 
-
-  // function toggleTheme(){
-      
-  //     const setTheme = this.checked ? 'dark' : 'light';
-  //     root.setAttribute('data-theme', setTheme);
   
-  //     localStorage.setItem('theme', setTheme);
-  // }
-  
-
-  // switcherTheme.addEventListener('click', toggleTheme);
 })
 </script>
 
 <template>
   <Header />
 
-  <main>
+  <main id="home">
     <div class="background"></div>
     <Presentation />
   </main>
@@ -47,7 +31,9 @@ main {
   align-items: center;
   position: relative;
   width: 100%;
-  height: fit-content; 
+  height: fit-content;
+  padding-top: 40px;
+  scroll-snap-type: proximity;
 }
 main > div.background {
   position: absolute;
@@ -62,6 +48,7 @@ main > div.background {
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: top center;
+  transition: all ease 0.5s;
 }
 
 @media (min-width: 1024px) {
