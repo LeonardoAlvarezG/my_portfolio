@@ -3,12 +3,19 @@ import Header from "./components/Header.vue"
 import Presentation from "./components/Presentation.vue"
 import { onMounted, ref, computed } from "vue";
 
-const storageTheme = localStorage.getItem('theme');
-const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+// const storageTheme = localStorage.getItem('theme');
+// const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-const newTheme = storageTheme ?? systemColorScheme;
+// const newTheme = storageTheme ?? systemColorScheme;
 
-document.documentElement.setAttribute('data-theme', newTheme);
+// document.documentElement.setAttribute('data-theme', newTheme);
+
+const URL_SEARCHPARAMS = new URLSearchParams(window.location.search);
+const USER_LANGUAGE = String(navigator.language || navigator.userLanguage).split("-")[0];
+if (URL_SEARCHPARAMS.get("lang") !== "en") {
+  URL_SEARCHPARAMS.set("lang","en");
+  window.location.search = URL_SEARCHPARAMS;
+}
 
 onMounted(() => {
   
@@ -18,9 +25,9 @@ onMounted(() => {
 <template>
   <Header />
 
-  <main id="home">
+  <main>
     <div class="background"></div>
-    <Presentation />
+    <Presentation id="home" />
   </main>
 </template>
 
@@ -33,6 +40,7 @@ main {
   width: 100%;
   height: fit-content;
   padding-top: 40px;
+  /* scroll-padding-top: 40px; */
   scroll-snap-type: proximity;
 }
 main > div.background {

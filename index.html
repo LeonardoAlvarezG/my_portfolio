@@ -7,13 +7,26 @@
     <meta name="description" content="Author: Leonardo Manuel Alvarez Gonzalez, Project: Personal Portfolio, Frontend Framework: Vue 3, Position: Frontend Web Developer">
     <title>Portfolio LMAG</title>
 
+    <style>
+      :root[data-theme="light"] {
+        body {
+          background-color: #ffffff;
+        }
+      }
+      :root[data-theme="dark"] {
+        body {
+          background-color: #181818;
+        }
+      }
+    </style>
+
     <script>
       const storageTheme = localStorage.getItem('theme');
       const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       
-      const newTheme = storageTheme ?? systemColorScheme;
+      const theme = storageTheme ?? systemColorScheme;
 
-      document.documentElement.setAttribute('data-theme', newTheme);
+      document.documentElement.setAttribute('data-theme', theme);
     </script>
 
   </head>

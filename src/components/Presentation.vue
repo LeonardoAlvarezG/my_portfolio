@@ -96,10 +96,6 @@ section {
                 & h2 {
                     font-size: 1.5rem;
                     transition: all ease 0.2s;
-
-                    &:hover {
-                        text-shadow: 0 0 5px var(--accent-color);
-                    }
                 }
 
                 & h1 {
@@ -107,19 +103,11 @@ section {
                     color: var(--accent-color);
                     line-height: 1;
                     transition: all ease 0.2s;
-
-                    &:hover {
-                        text-shadow: 0 0 5px var(--accent-color);
-                    }
                 }
 
                 & p {
                     font-size: 2rem;
                     line-height: 2;
-
-                    &:hover {
-                        text-shadow: 0 0 5px var(--accent-color);
-                    }
                 }
             }
 
@@ -199,6 +187,7 @@ section {
                     text-transform: uppercase;
                     justify-content: center;
                     font-size: 1rem;
+                    font-weight: bold;
                     transition: all ease 0.2s;
 
                     &.contact_me {
