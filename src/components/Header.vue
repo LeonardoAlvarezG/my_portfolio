@@ -99,6 +99,11 @@ header {
 
     &>a {
         display: flex;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: var(--accent-color);
+        }
     }
 
     &>nav {
@@ -134,9 +139,10 @@ header {
                     padding: 0.5rem;
                     border: 1px solid transparent;
                     border-radius: 4px;
+                    transition: border 0.2s ease-in-out;
 
                     &:hover {
-                        background-image: linear-gradient(to top, var(--accent-color), var(--color-background) 35%);
+                        /* background-image: linear-gradient(to top, var(--accent-color), var(--color-background) 35%); */
                         border: 1px solid var(--accent-color);
                     }
                 }

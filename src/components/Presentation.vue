@@ -42,7 +42,7 @@ section {
     width: 100%;
     height: fit-content;
     justify-content: center;
-    margin-top: 40px;
+    padding-top: 40px;
 
     & > article {
         display: flex;
@@ -134,12 +134,6 @@ section {
                     border: 2px solid transparent;
                     transition: all ease 0.2s;
                     padding: 0.5rem;
-
-                    &:hover {
-                        border: 2px solid var(--accent-color);
-                        box-shadow: 0 0 10px 2px var(--accent-color);
-                        backdrop-filter: blur(3px);
-                    }
 
                     & h1 {
                         height: 100%;

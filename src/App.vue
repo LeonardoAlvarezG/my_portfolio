@@ -1,6 +1,7 @@
 <script setup>
 import Header from "./components/Header.vue"
 import Presentation from "./components/Presentation.vue"
+import Experience from "./components/Experience.vue"
 import { onMounted, ref, computed } from "vue";
 
 // const storageTheme = localStorage.getItem('theme');
@@ -28,6 +29,7 @@ onMounted(() => {
   <main>
     <div class="background"></div>
     <Presentation id="home" />
+    <Experience id="experience" />
   </main>
 </template>
 
@@ -40,14 +42,15 @@ main {
   width: 100%;
   height: fit-content;
   padding-top: 40px;
-  /* scroll-padding-top: 40px; */
-  scroll-snap-type: proximity;
+  scroll-padding-top: 40px;
+  gap: 60px;
+  scroll-snap-type: y proximity;
 }
 main > div.background {
   position: absolute;
   z-index: 1;
   width: 100%;
-  height: 400px;
+  height: -webkit-fill-available;
   background-color: var(--color-background-soft);
   background-repeat: no-repeat;
   background-position: center;

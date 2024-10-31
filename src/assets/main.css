@@ -39,3 +39,7 @@ button, button:hover {
   background: none;
   display: inherit;
 }
+
+html {
+  scroll-padding-top: 60px;
+}
