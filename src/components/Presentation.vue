@@ -43,6 +43,7 @@ section {
     height: fit-content;
     justify-content: center;
     padding-top: 40px;
+    margin-bottom: 40px;
 
     & > article {
         display: flex;

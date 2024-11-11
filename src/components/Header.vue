@@ -4,8 +4,8 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
             </ul>
         </nav>
         <div>
@@ -95,7 +95,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(10px);
+    background-color: var(--color-background);
 
     &>a {
         display: flex;

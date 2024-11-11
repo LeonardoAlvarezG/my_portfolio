@@ -1,6 +1,7 @@
 <script setup>
 import Header from "./components/Header.vue"
 import Presentation from "./components/Presentation.vue"
+import Projects from "./components/Projects.vue";
 import Experience from "./components/Experience.vue"
 import { onMounted, ref, computed } from "vue";
 
@@ -29,6 +30,7 @@ onMounted(() => {
   <main>
     <div class="background"></div>
     <Presentation id="home" />
+    <Projects id="projects" />
     <Experience id="experience" />
   </main>
 </template>
