@@ -1,5 +1,6 @@
 <template>
     <section>
+        <div class="background"></div>
         <article>
             <figure class="profile">
                 <img src="../assets/test_image.jpeg" alt="Profile Picture" loading="lazy" title="Leonardo Alvarez" />
@@ -44,6 +45,23 @@ section {
     justify-content: center;
     padding-top: 40px;
     margin-bottom: 40px;
+    position: relative;
+
+    & > div.background {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-background-soft);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        mask-image: url(../assets/background_pattern.svg);
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        mask-position: top center;
+        transition: all ease 0.5s;
+    }
 
     & > article {
         display: flex;

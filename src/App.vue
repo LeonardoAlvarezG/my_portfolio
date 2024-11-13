@@ -3,6 +3,7 @@ import Header from "./components/Header.vue"
 import Presentation from "./components/Presentation.vue"
 import Projects from "./components/Projects.vue";
 import Experience from "./components/Experience.vue"
+import CallToAction from "./components/CallToAction.vue";
 import { onMounted, ref, computed } from "vue";
 
 // const storageTheme = localStorage.getItem('theme');
@@ -28,9 +29,9 @@ onMounted(() => {
   <Header />
 
   <main>
-    <div class="background"></div>
     <Presentation id="home" />
     <Projects id="projects" />
+    <CallToAction />
     <Experience id="experience" />
   </main>
 </template>
@@ -47,21 +48,6 @@ main {
   scroll-padding-top: 40px;
   gap: 60px;
   scroll-snap-type: y proximity;
-}
-main > div.background {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: -webkit-fill-available;
-  background-color: var(--color-background-soft);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  mask-image: url(./assets/background_pattern.svg);
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: top center;
-  transition: all ease 0.5s;
 }
 
 @media (min-width: 1024px) {
