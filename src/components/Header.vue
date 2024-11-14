@@ -96,6 +96,7 @@ header {
     top: 0;
     z-index: 100;
     background-color: var(--color-background);
+    padding: 0 2rem;
 
     &>a {
         display: flex;
