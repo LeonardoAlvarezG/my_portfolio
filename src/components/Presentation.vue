@@ -1,6 +1,5 @@
 <template>
-    <section>
-        <div class="background"></div>
+    <section class="container">
         <article>
             <figure class="profile">
                 <img src="../assets/test_image.jpeg" alt="Profile Picture" loading="lazy" title="Leonardo Alvarez" />
@@ -37,7 +36,7 @@
 <script setup></script>
 
 <style scoped>
-section {
+section.container {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -47,9 +46,10 @@ section {
     margin-bottom: 40px;
     position: relative;
 
-    & > div.background {
+    &::before {
+        content: '';
         position: absolute;
-        z-index: 1;
+        z-index: 0;
         width: 100%;
         height: 100%;
         background-color: var(--color-background-soft);

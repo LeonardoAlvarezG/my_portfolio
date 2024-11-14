@@ -44,7 +44,7 @@ main {
   position: relative;
   width: 100%;
   height: fit-content;
-  padding-top: 40px;
+  /* padding-top: 40px; */
   scroll-padding-top: 40px;
   gap: 60px;
   scroll-snap-type: y proximity;
