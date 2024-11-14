@@ -1,18 +1,32 @@
 <template>
-    <section>
+    <section class="container">
         <h2>Experience</h2>
-        <section>
+        <section class="jobs">
             <article>
                 <div class="dot"></div>
                 <div class="place">
                     <h3>Mine KPIs</h3>
-                    <h4>desde 2022 hasta 2024</h4>
+                    <h4>from 2022 to 2024</h4>
                 </div>
                 <div class="job_description">
                     <h3>Software Architecture & Front-end</h3>
                     <p>I developed and maintained the front-end of the web application "BlockNode Operations App" that was useful in the IoT field, especially in the supply chain where the process efficiency was accelerated and enhanced.</p>
                     <p>My development was focused on various web programming languages such as JavaScript, HTML and CSS, in addition to the use of teamwork tools such as Jira, Figma, Skype and Discord, continuously contributing to the improvement of the process in the supply chain.</p>
                     <p>I used several APIs that facilitate the communication of the physical system with the information necessary to obtain the KPIs through data science, the most notable were Web NFC API, Sensor APIs, and Battery Status API, which defined a great advance in the management of product storage and distribution using the web application.</p>
+                </div>
+            </article>
+            <article>
+                <div class="dot"></div>
+                <div class="place">
+                    <h3>Freelance</h3>
+                    <h4>from 2020 to 2022</h4>
+                </div>
+                <div class="job_description">
+                    <h3>Engineer in Computed Systems</h3>
+                    <p>I developed and designed the web application "Movies Storage" that was very useful to a little community that need a guide to find the location of some movies in their storage.</p>
+                    <p>I learned and improve my programming logic doing little practices to later create projects with greater meaning for people with needs, development of ideas and solving problems.</p>
+                    <p>I started with web technologies such as HTML, JavaScript, and CSS, and then continued to grow with frameworks such as NodeJS and VueJS that speed up the development of websites and web applications considerably.</p>
+                    <p>Currently I have not stopped learning the technologies that I already know for the optimization of the projects I work on, as well as new technologies specialized in the web Front-end such as React or Angular.</p>
                 </div>
             </article>
         </section>
@@ -22,7 +36,7 @@
 <script setup></script>
 
 <style scoped>
-section {
+section.container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -38,10 +52,14 @@ section {
         color: var(--color-heading);
     }
 
-    &>section {
+    &>section.jobs {
+        display: flex;
+        flex-direction: column;
         margin-top: 2.5rem;
+        gap: 2rem;
 
         &>article {
+            position: relative;
             display: flex;
             flex-direction: row;
             align-items: start;
@@ -66,7 +84,7 @@ section {
                         margin-left: 1.188rem;
                         background: linear-gradient(to bottom, var(--accent-color) 66%, transparent);
                         width: 0.125rem;
-                        height: -webkit-fill-available;
+                        height: 100%;
                     }
                 }
 
