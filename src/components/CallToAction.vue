@@ -15,6 +15,10 @@
 <style scoped>
 section {
     display: flex;
+    margin: 40px 0;
+    background-color: var(--color-background-soft);
+    padding: 2rem;
+    border-radius: 0.5rem;
 
     &>article {
         display: flex;
@@ -40,14 +44,14 @@ section {
             position: relative;
             width: fit-content;
             height: fit-content;
-            min-height: 40px;
+            min-height: 52px;
             border: solid 1px var(--accent-color);
             border-radius: 40px;
             background-color: var(--accent-color);
             color: var(--color-background);
-            padding: 0.5rem 1rem;
+            padding: 0.875rem 1.5rem;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             transition: border ease 0.3s,
                         text-shadow ease 0.3s;
