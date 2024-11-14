@@ -4,6 +4,7 @@ import Presentation from "./components/Presentation.vue"
 import Projects from "./components/Projects.vue";
 import Experience from "./components/Experience.vue"
 import CallToAction from "./components/CallToAction.vue";
+import Footer from "./components/Footer.vue";
 import { onMounted, ref, computed } from "vue";
 
 // const storageTheme = localStorage.getItem('theme');
@@ -33,6 +34,7 @@ onMounted(() => {
     <Projects id="projects" />
     <CallToAction />
     <Experience id="experience" />
+    <Footer />
   </main>
 </template>
 
