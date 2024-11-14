@@ -46,7 +46,7 @@ section {
             height: fit-content;
             min-height: 52px;
             border: solid 1px var(--accent-color);
-            border-radius: 40px;
+            border-radius: 52px;
             background-color: var(--accent-color);
             color: var(--color-background);
             padding: 0.875rem 1.5rem;
