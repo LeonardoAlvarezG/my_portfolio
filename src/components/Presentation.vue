@@ -4,7 +4,7 @@
             <figure class="profile">
                 <img src="../assets/test_image.jpeg" alt="Profile Picture" loading="lazy" title="Leonardo Alvarez" />
             </figure>
-            <header>
+            <section>
                 <hgroup class="presentation">
                     <h2>Hi, I'm</h2>
                     <h1>Leonardo Alvarez</h1>
@@ -25,10 +25,10 @@
                     </article>
                 </section>
                 <section class="presentation contact">
-                    <a href="#contact" class="contact_me">Contact Me!</a>
-                    <a href="" class="resume">Get Resume</a>
+                    <button class="contact_me">Contact Me</button>
+                    <button class="resume">Get Resume</button>
                 </section>
-            </header>
+            </section>
         </article>
     </section>
 </template>
@@ -96,7 +96,7 @@ section.container {
             }
         }
 
-        & > header {
+        & > section {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -189,38 +189,47 @@ section.container {
                 height: fit-content;
                 align-self: center;
 
-                & >a {
-                    display: flex;
+                & > button {
                     position: relative;
-                    height: 60px;
-                    width: 150px;
-                    border-radius: 50px;
-                    align-items: center;
-                    cursor: pointer;
-                    text-transform: uppercase;
+                    display: flex;
                     justify-content: center;
-                    font-size: 1rem;
-                    font-weight: bold;
-                    transition: all ease 0.2s;
+                    align-items: center;
+                    width: fit-content;
+                    height: fit-content;
+                    min-height: 52px;
+                    border-radius: 52px;
+                    padding: 0.875rem 1.5rem;
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-weight: 600;
+                    transition: border ease 0.3s,
+                                text-shadow ease 0.3s,
+                                color ease 0.3s,
+                                background ease 0.3s;
 
                     &.contact_me {
+                        border: solid 1px var(--accent-color);
                         background-color: var(--accent-color);
                         color: var(--color-background);
 
                         &:hover {
-                            text-shadow: 0 0 20px var(--color-background);
+                            border: solid 1px var(--color-heading);
                         }
                     }
 
                     &.resume {
                         background-color: var(--color-background);
-                        border: 2px solid var(--accent-color);
+                        border: solid 1px var(--color-heading);
 
                         &:hover {
                             background-color: var(--accent-color);
+                            border: solid 1px var(--accent-color);
                             color: var(--color-background);
-                            text-shadow: 0 0 20px var(--color-background);
                         }
+                    }
+
+                    &:hover {
+                        text-shadow: 0 0 20px var(--color-background);
                     }
                 }
             }
